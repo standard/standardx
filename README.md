@@ -27,7 +27,7 @@ npm install standardx --global
 ```
 
 ## Usage
-Use `standardx` on the command line the same way you used `standard`:
+Use `standardx` on the command line the same way you use `standard`:
 
 ```
 Usage:
