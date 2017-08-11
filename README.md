@@ -85,11 +85,9 @@ or via package.json:
     }
   }
 }
+```
 
 Now, running `standardx` (with no additional arguments) will allow snake_case without error!
-
-
-```
 
 ## Contributing
 
