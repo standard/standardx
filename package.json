@@ -1,7 +1,7 @@
 {
   "name": "standardx",
   "description": "JavaScript Standard Style with custom tweaks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Dan Flettre <flettre@gmail.com>",
   "bin": "./bin/cmd.js",
   "bugs": {
