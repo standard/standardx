@@ -13,16 +13,82 @@ JavaScript Standard Style with custom tweaks
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [standard-url]: http://npm.im/standard
 
+
+## Overview
+
+This package allows users to follow JavaScript Standard Style, but deviate if needed. This can be done by adding an `.eslintrc` file to their project directory or by adding an `"eslintConfig"` attribute to your `packages.json`. That eslint config will be layed on top of the `standard` ruleset.
+
+All other `standard` features remain intact (including `--fix`!)
+
 ## Install
 
 ```
-npm install standardx
+npm install standardx --global
 ```
 
 ## Usage
+Use `standardx` on the command line the same way you used `standard`:
 
-```js
-var standardx = require('standardx')
+```
+Usage:
+    standardx <flags> [FILES...]
+
+    If FILES is omitted, then all JavaScript source files (*.js, *.jsx) in the current
+    working directory are checked, recursively.
+
+    Certain paths (node_modules/, coverage/, vendor/, *.min.js, bundle.js, and
+    files/folders that begin with '.' like .git/) are automatically ignored.
+
+    Paths in a project's root .gitignore file are also automatically ignored.
+
+Flags:
+        --fix       Automatically fix problems
+    -v, --verbose   Show rule names for errors (to ignore specific rules)
+        --version   Show current version
+    -h, --help      Show usage information
+
+Flags (advanced):
+        --stdin     Read file text from stdin
+        --global    Declare global variable
+        --plugin    Use custom eslint plugin
+        --env       Use custom eslint environment
+        --parser    Use custom js parser (e.g. babel-eslint)
+```
+
+## Configuring
+
+Running `standardx` with no additional configuration is the same as running `standard` itself.
+
+If there are rules you would like turned off, modify the ruleset using eslint config. Check out [Configuring eslint](http://eslint.org/docs/user-guide/configuring) for more information.
+
+### Example: Allow snake_case by turning off the camelCase rule
+
+Via: `.eslintrc`:
+```json
+{
+  "rules": {
+    "camelcase": 0
+  }
+}
+```
+
+or via package.json:
+```json
+{
+  "name": "coolproject",
+  "description": "My Cool Project",
+  "version": "1.0.0",
+  "author": "Fantastic Developer",
+  "eslintConfig": {
+    "rules": {
+      "camelcase": 0
+    }
+  }
+}
+
+Now, running `standardx` (with no additional arguments) will allow snake_case without error!
+
+
 ```
 
 ## Contributing
