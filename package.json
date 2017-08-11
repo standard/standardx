@@ -24,8 +24,11 @@
     "test": "standard && tape test/*.js | tap-spec"
   },
   "eslintConfig": {
-      "rules": {
-          "camelcase": 0
-      }
+    "rules": {
+      "camelcase": 0
+    }
+  },
+  "dependencies": {
+    "standard-engine": "^7.0.0"
   }
 }
