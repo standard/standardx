@@ -8,7 +8,6 @@
     "url": "https://github.com/standard/standardx/issues"
   },
   "devDependencies": {
-    "standard": "^10.0.3",
     "tap-spec": "^4.0.2",
     "tape": "^4.0.0"
   },
@@ -29,6 +28,7 @@
     }
   },
   "dependencies": {
+    "standard": "^10.0.3",
     "standard-engine": "^7.0.0"
   }
 }
