@@ -8,7 +8,9 @@
     "url": "https://github.com/standard/standardx/issues"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
     "cross-spawn": "^5.1.0",
+    "eslint-config-standard-tunnckocore": "^1.0.7",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "run-parallel-limit": "^1.0.3",
