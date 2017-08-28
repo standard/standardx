@@ -97,6 +97,18 @@ test('test github repos that use `standard`', function (t) {
         }
 
         function runStandard (cb) {
+          // Rename package.json "standard" field to "standardx"
+          // See https://github.com/standard/standardx/pull/1#issuecomment-325402182
+          const packageJsonPath = path.resolve(folder, 'package.json')
+          if (fs.existsSync(packageJsonPath)) {
+            const packageJson = require(packageJsonPath)
+            if (packageJson.standard) {
+              packageJson.standardx = packageJson.standard
+              delete packageJson.standard
+              fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
+            }
+          }
+
           var args = [ '--verbose' ]
           if (pkg.args) args.push.apply(args, pkg.args)
           spawn(STANDARD, args, { cwd: folder }, function (err) {
