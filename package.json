@@ -29,6 +29,6 @@
   },
   "dependencies": {
     "standard": "^11.0.0",
-    "standard-engine": "^7.0.0"
+    "standard-engine": "^8.0.0"
   }
 }
