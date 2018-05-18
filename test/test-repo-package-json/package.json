@@ -1,0 +1,14 @@
+{
+  "name": "test-repo-package-json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "eslintConfig": {
+    "rules": {
+      "camelcase": 0
+    }
+  }
+}
