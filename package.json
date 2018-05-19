@@ -7,6 +7,10 @@
   "bugs": {
     "url": "https://github.com/standard/standardx/issues"
   },
+  "dependencies": {
+    "standard": "^11.0.0",
+    "standard-engine": "^9.0.0"
+  },
   "devDependencies": {
     "cross-spawn": "^6.0.5",
     "tap-spec": "^4.0.2",
@@ -24,10 +28,9 @@
     "test": "standard && tape test/*.js | tap-spec"
   },
   "standard": {
-    "ignore": ["test/test-repo-eslintrc", "test/test-repo-package-json"]
-  },
-  "dependencies": {
-    "standard": "^11.0.0",
-    "standard-engine": "^9.0.0"
+    "ignore": [
+      "test/test-repo-eslintrc",
+      "test/test-repo-package-json"
+    ]
   }
 }
