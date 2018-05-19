@@ -8,6 +8,7 @@
     "url": "https://github.com/standard/standardx/issues"
   },
   "devDependencies": {
+    "cross-spawn": "^6.0.5",
     "tap-spec": "^4.0.2",
     "tape": "^4.0.0"
   },
@@ -22,10 +23,8 @@
   "scripts": {
     "test": "standard && tape test/*.js | tap-spec"
   },
-  "eslintConfig": {
-    "rules": {
-      "camelcase": 0
-    }
+  "standard": {
+    "ignore": ["test/test-repo-eslintrc", "test/test-repo-package-json"]
   },
   "dependencies": {
     "standard": "^11.0.0",
