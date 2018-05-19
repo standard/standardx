@@ -5,18 +5,21 @@ var crossSpawn = require('cross-spawn')
 var CMD_PATH = path.join(__dirname, '..', 'bin', 'cmd.js')
 
 test('command line usage: --help', function (t) {
-  t.plan(1)
+  t.plan(2)
 
   var result = crossSpawn.sync(CMD_PATH, ['--help'])
-  if (result.error) t.fail(result.error)
+
+  t.error(result.error)
   t.equal(result.status, 0, 'zero exit code')
 })
 
 test('test-repo-eslintrc allows snake_case', function (t) {
-  t.plan(3)
+  t.plan(4)
 
-  var result = crossSpawn.sync(CMD_PATH, [path.join(__dirname, 'test-repo-eslintrc', 'index.js')])
-  if (result.error) t.fail(result.error)
+  var jsPath = path.join(__dirname, 'test-repo-eslintrc', 'index.js')
+  var result = crossSpawn.sync(CMD_PATH, [jsPath])
+
+  t.error(result.error)
   t.equal(result.status, 0, 'zero exit code')
 
   t.equal(result.stdout.toString().trim(), '', 'no output')
@@ -24,10 +27,12 @@ test('test-repo-eslintrc allows snake_case', function (t) {
 })
 
 test('test-repo-package-json allows snake_case', function (t) {
-  t.plan(3)
+  t.plan(4)
 
-  var result = crossSpawn.sync(CMD_PATH, [path.join(__dirname, 'test-repo-package-json', 'index.js')])
-  if (result.error) t.fail(result.error)
+  var jsPath = path.join(__dirname, 'test-repo-package-json', 'index.js')
+  var result = crossSpawn.sync(CMD_PATH, [jsPath])
+
+  t.error(result.error)
   t.equal(result.status, 0, 'zero exit code')
 
   t.equal(result.stdout.toString().trim(), '', 'no output')
