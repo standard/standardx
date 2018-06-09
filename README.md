@@ -69,7 +69,7 @@ Flags (advanced):
 
 ## Configuring
 
-Running `standardx` with no additional configuration is the same as running `standard` itself.
+Running `standardx` with no additional configuration is the same as running `standard` itself. (Except rename the `"standard"` property in `package.json` to `"standardx"` if you have one.)
 
 If there are rules you would like turned off, modify the ruleset using eslint config. Check out [Configuring eslint](http://eslint.org/docs/user-guide/configuring) for more information.
 
