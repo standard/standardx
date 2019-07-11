@@ -1,5 +1,7 @@
 # standardx
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/standard/standardx.svg)](https://greenkeeper.io/)
+
 JavaScript Standard Style with custom tweaks
 
 [![npm][npm-image]][npm-url]
