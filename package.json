@@ -8,7 +8,7 @@
     "url": "https://github.com/standard/standardx/issues"
   },
   "dependencies": {
-    "standard": "^12.0.1",
+    "standard": "^13.0.0",
     "standard-engine": "^10.0.0"
   },
   "devDependencies": {
