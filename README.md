@@ -16,7 +16,7 @@ JavaScript Standard Style with custom tweaks
 
 ## Overview
 
-This package allows users to follow JavaScript Standard Style, but deviate if needed. This can be done by adding an `.eslintrc` file to their project directory or by adding an `"eslintConfig"` attribute to your `packages.json`. That eslint config will be layed on top of the `standard` ruleset.
+This package allows users to follow JavaScript Standard Style, but deviate if needed. This can be done by adding an `.eslintrc` file to their project directory or by adding an `"eslintConfig"` attribute to your `package.json`. That eslint config will be layed on top of the `standard` ruleset.
 
 If there is a `standard` attribute in your `package.json` for defining globals or ignoring files, rename it to `standardx`:
 
