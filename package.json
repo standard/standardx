@@ -2,7 +2,11 @@
   "name": "standardx",
   "description": "JavaScript Standard Style with custom tweaks",
   "version": "6.0.0",
-  "author": "Dan Flettre <flettre@gmail.com>",
+  "author": {
+    "name": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "https://feross.org"
+  },
   "bin": "./bin/cmd.js",
   "bugs": {
     "url": "https://github.com/standard/standardx/issues"
@@ -32,5 +36,19 @@
       "test/test-repo-eslintrc",
       "test/test-repo-package-json"
     ]
-  }
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/feross"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/feross"
+    },
+    {
+      "type": "consulting",
+      "url": "https://feross.org/support"
+    }
+  ]
 }
