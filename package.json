@@ -14,7 +14,7 @@
   "devDependencies": {
     "cross-spawn": "^7.0.0",
     "tap-spec": "^5.0.0",
-    "tape": "^4.0.0"
+    "tape": "^5.0.0"
   },
   "homepage": "https://github.com/standard/standardx",
   "keywords": [],
