@@ -1,8 +1,8 @@
-var pkg = require('./package.json')
-var stdVersion = require('standard/package.json').version
-var stdOpts = require('standard/options.js')
+const pkg = require('./package.json')
+const stdVersion = require('standard/package.json').version
+const stdOpts = require('standard/options.js')
 
-var opts = Object.assign({}, stdOpts, {
+const opts = Object.assign({}, stdOpts, {
   bugs: pkg.bugs.url,
   cmd: 'standardx',
   eslintConfig: {
