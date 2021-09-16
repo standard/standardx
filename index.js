@@ -1,5 +1,7 @@
 /*! standardx. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
-const Linter = require('standard-engine').linter
-const opts = require('./options')
+import standardEngine from 'standard-engine'
+import opts from './options.js'
 
-module.exports = new Linter(opts)
+const Linter = standardEngine.linter
+
+export default new Linter(opts)

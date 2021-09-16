@@ -1,8 +1,8 @@
-const path = require('path')
-const test = require('tape')
-const crossSpawn = require('cross-spawn')
+import { fileURLToPath } from 'node:url'
+import test from 'tape'
+import crossSpawn from 'cross-spawn'
 
-const CMD_PATH = path.join(__dirname, '..', 'bin', 'cmd.js')
+const CMD_PATH = fileURLToPath(new URL('../bin/cmd.js', import.meta.url))
 
 test('command line usage: --help', function (t) {
   t.plan(2)
@@ -16,7 +16,7 @@ test('command line usage: --help', function (t) {
 test('test-repo-eslintrc allows snake_case', function (t) {
   t.plan(4)
 
-  const jsPath = path.join(__dirname, 'test-repo-eslintrc', 'index.js')
+  const jsPath = fileURLToPath(new URL('./test-repo-eslintrc/index.js', import.meta.url))
   const result = crossSpawn.sync(CMD_PATH, [jsPath])
 
   t.error(result.error)
@@ -29,7 +29,7 @@ test('test-repo-eslintrc allows snake_case', function (t) {
 test('test-repo-package-json allows snake_case', function (t) {
   t.plan(4)
 
-  const jsPath = path.join(__dirname, 'test-repo-package-json', 'index.js')
+  const jsPath = fileURLToPath(new URL('./test-repo-package-json/index.js', import.meta.url))
   const result = crossSpawn.sync(CMD_PATH, [jsPath])
 
   t.error(result.error)
