@@ -1,8 +1,16 @@
 #!/usr/bin/env node
+/* eslint-disable no-var, no-eval */
 
-if (process.version.match(/v(\d+)\./)[1] < 4) {
-  console.error('standardx: Node v4 or greater is required. `standardx` did not run.')
+var match = process.version.match(/v(\d+)\.(\d+)/)
+var major = parseInt(match[1], 10)
+var minor = parseInt(match[2], 10)
+
+if (major >= 12 || (major === 12 && minor >= 20)) {
+  eval('import("standard-engine")').then(function (standardEngine) {
+    eval('import("../options.js")').then(function (options) {
+      standardEngine.cli(options.default)
+    })
+  })
 } else {
-  const opts = require('../options')
-  require('standard-engine').cli(opts)
+  console.error('standardx: Node 12.20.0 or greater is required. `standardx` did not run.')
 }

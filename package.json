@@ -11,6 +11,7 @@
   "bugs": {
     "url": "https://github.com/standard/standardx/issues"
   },
+  "type": "module",
   "dependencies": {
     "standard": "^16.0.1",
     "standard-engine": "^14.0.1"
@@ -18,7 +19,10 @@
   "devDependencies": {
     "cross-spawn": "^7.0.3",
     "tap-spec": "^5.0.0",
-    "tape": "^5.0.1"
+    "tape": "^5.3.1"
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "homepage": "https://github.com/standard/standardx",
   "keywords": [],
