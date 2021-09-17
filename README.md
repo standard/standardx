@@ -3,13 +3,13 @@
 JavaScript Standard Style with custom tweaks
 
 [![npm][npm-image]][npm-url]
-[![travis][travis-image]][travis-url]
+[![tests][tests-image]][tests-url]
 [![standard][standard-image]][standard-url]
 
 [npm-image]: https://img.shields.io/npm/v/standardx.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/standardx
-[travis-image]: https://img.shields.io/travis/standard/standardx.svg?style=flat-square
-[travis-url]: https://travis-ci.org/standard/standardx
+[tests-image]: https://github.com/standard/standardx/actions/workflows/test.yml/badge.svg
+[tests-url]: https://github.com/standard/standardx/actions/workflows/test.yml
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [standard-url]: http://npm.im/standard
 
