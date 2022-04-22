@@ -1,7 +1,7 @@
 {
   "name": "standardx",
   "description": "JavaScript Standard Style with custom tweaks",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
@@ -13,8 +13,8 @@
   },
   "type": "module",
   "dependencies": {
-    "standard": "^16.0.1",
-    "standard-engine": "^14.0.1"
+    "standard": "^17.0.0",
+    "standard-engine": "^15.0.0"
   },
   "devDependencies": {
     "cross-spawn": "^7.0.3",

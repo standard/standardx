@@ -3,7 +3,7 @@ import stdOpts from 'standard/options.js'
 
 const stdVersion = stdOpts.version
 const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf-8'))
-const baseConfig = JSON.parse(readFileSync(stdOpts.eslintConfig.configFile, 'utf-8'))
+const baseConfig = JSON.parse(readFileSync(stdOpts.eslintConfig.overrideConfigFile, 'utf-8'))
 
 export default Object.assign({}, stdOpts, {
   bugs: pkg.bugs.url,
